@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- themes.xml -->
+<resources>
+
+    <!-- Base uygulama teması -->
+    <style name="Theme.GetirApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Ana renk -->
+        <item name="colorPrimary">#6C2DC7</item>        <!-- Canlı mor -->
+        <item name="colorPrimaryVariant">#5927a1</item>  <!-- Koyu mor -->
+        <item name="colorOnPrimary">#FFFFFF</item>       <!-- Mor üstü yazılar beyaz -->
+
+        <!-- Vurgu rengi -->
+        <item name="colorSecondary">#FFCA28</item>      <!-- Sarı -->
+        <item name="colorOnSecondary">#000000</item>    <!-- Sarı üstü yazılar siyah -->
+
+        <!-- Arka plan -->
+        <item name="android:windowBackground">#F3F3F3</item>  <!-- Açık gri -->
+
+        <!-- Buton stili -->
+        <item name="materialButtonStyle">@style/GetirButtonStyle</item>
+
+    </style>
+
+    <!-- Buton için özel stil -->
+    <style name="GetirButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#6C2DC7</item>  <!-- Buton arka plan mor -->
+        <item name="android:textColor">#FFCA28</item>       <!-- Buton yazı sarı -->
+        <item name="cornerRadius">24dp</item>               <!-- Buton köşe yuvarlaklığı -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

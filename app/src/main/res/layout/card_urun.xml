@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="8dp"
+    android:background="#FFFFFF">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageViewUrun"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/elma"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewUrunAd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Elma"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/buttonSepetEkle"
+            app:layout_constraintStart_toEndOf="@id/imageViewUrun"
+            app:layout_constraintTop_toTopOf="@id/imageViewUrun" />
+
+        <TextView
+            android:id="@+id/textViewUrunFiyat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="5 ₺"
+            android:textColor="#9C27B0"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/textViewUrunAd"
+            app:layout_constraintStart_toStartOf="@id/textViewUrunAd"
+            app:layout_constraintTop_toBottomOf="@id/textViewUrunAd" />
+
+        <Button
+            android:id="@+id/buttonSepetEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

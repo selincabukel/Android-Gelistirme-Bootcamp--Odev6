@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/kategoriFragment">
+
+    <fragment
+        android:id="@+id/kategoriFragment"
+        android:name="com.example.getiruygulamas.ui.fragment.KategoriFragment"
+        android:label="Kategoriler"
+        tools:layout="@layout/fragment_kategori">
+
+        <!-- Kategori seçince ürün listesine geçiş -->
+        <action
+            android:id="@+id/actionKategoriFragmentToUrunListesiFragment"
+            app:destination="@id/urunListesiFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/urunListesiFragment"
+        android:name="com.example.getiruygulamas.ui.fragment.UrunListesiFragment"
+        android:label="Ürünler"
+        tools:layout="@layout/fragment_urun_listesi">
+
+        <!-- Kategori bilgisi argüman olarak -->
+        <argument
+            android:name="kategori"
+            app:argType="com.example.getiruygulamas.data.Kategori" />
+
+        <!-- Ürün seçince detay sayfasına geçiş -->
+        <action
+            android:id="@+id/actionUrunListesiToUrunDetay"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/urunDetayFragment"
+        android:name="com.example.getiruygulamas.ui.fragment.UrunDetayFragment"
+        android:label="Ürün Detay"
+        tools:layout="@layout/fragment_urun_detay">
+
+        <!-- Ürün bilgisi argüman olarak -->
+        <argument
+            android:name="urun"
+            app:argType="com.example.getiruygulamas.data.Urun" />
+    </fragment>
+
+</navigation>

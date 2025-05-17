@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarUrunDetay"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="?attr/colorOnPrimary"
+        android:title="Ürün Detay"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/ivUrunResim"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarUrunDetay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/urun_resim"
+        android:src="@drawable/elma" />
+
+    <TextView
+        android:id="@+id/tvUrunFiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 ₺"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ivUrunResim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSepeteEkle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Sepete Ekle"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUrunFiyat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/GetirButtonStyle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
